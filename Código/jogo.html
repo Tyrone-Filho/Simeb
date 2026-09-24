@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>SIMEB - Jogo</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+          <div class="logo">
+               <h1>SIMEB</h1>
+          </div>
+
+          <nav>
+               <a href="../index.html">Página Inicial</a>
+               <a href="sobre.html">Quem Somos Nós</a>
+               <a href="banco-questoes.html">Banco de Questões</a>
+               <a href="jogo.html">Jogo</a>
+          </nav>
+     </header>
+
+     <main>
+          <!-- TELA 1: escolha do personagem -->
+          <section id="tela-escolha" class="tela ativa">
+               <h2>Escolha um personagem para começar</h2>
+               <div class="grid">
+                    <div class="personagem" data-personagem="vitima">
+                         <div class="icone">🧍</div>
+                         <p>Vítima</p>
+                    </div>
+                    <div class="personagem" data-personagem="agressor">
+                         <div class="icone">😠</div>
+                         <p>Agressor</p>
+                    </div>
+                    <div class="personagem" data-personagem="investigador">
+                         <div class="icone">🕵️</div>
+                         <p>Investigador</p>
+                    </div>
+               </div>
+          </section>
+
+          <!-- TELA 2: video -->
+          <section id="tela-video" class="tela">
+               <video src="" autoplay controls id="jogo"></video>
+               <button id="fim-video" class="btn">Começar Questionário</button>
+          </section>
+
+          <!-- TELA 3: questionário -->
+          <section id="tela-quiz" class="tela">
+               <h2 id="quiz-titulo">Questionário</h2>
+               <div id="pergunta-container">
+                    <p id="pergunta-texto"></p>
+                    <div id="opcoes-container"></div>
+               </div>
+               <button id="btn-proxima" class="btn">Próxima pergunta</button>
+          </section>
+
+          <!-- TELA 4: resultado -->
+          <section id="tela-resultado" class="tela">
+               <h2>Fim de jogo!</h2>
+               <p id="resultado-texto"></p>
+               <button id="btn-reiniciar" class="btn">Jogar novamente</button>
+          </section>
+     </main>
+
+     <script src="jogo.js"></script>
+</body>
+</html>
